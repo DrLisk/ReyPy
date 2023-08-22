@@ -22,7 +22,7 @@ def splash(title, message, columns = 80):
     print("")
 
 
-def openFile(title=None):
+def openFileDialog(title=None):
     '''
     openFile(title)
 
@@ -31,7 +31,7 @@ def openFile(title=None):
     '''
     return askopenfilename(title)
 
-def saveFile(title=None, initialFile=None, fileList=None):
+def saveFileDialog(title=None, initialFile=None, fileList=None):
     '''
     saveFile(title=None, initialFile=None, fileList=None)
 
