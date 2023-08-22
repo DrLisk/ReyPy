@@ -1,4 +1,10 @@
     
+'''
+TODO:
+    Add support for .xls files
+    File writing?
+    Branch out file name to include writing? Or seperate file?
+'''
 def TXT(filepath):
     '''
     TXT(filepath)

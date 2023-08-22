@@ -1,4 +1,5 @@
 import math
+from tkinter import *
 
 def splash(title, message, columns = 80):
     '''
@@ -19,3 +20,13 @@ def splash(title, message, columns = 80):
     print(message)
     print("")
     print("")
+
+
+def openFile(title=None):
+    '''
+    openFile(title)
+
+    Opens a file dialog box for a use to select a file.
+    Returns the path to the file.
+    '''
+    return askopenfilename(title)
