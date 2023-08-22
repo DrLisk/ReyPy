@@ -26,7 +26,21 @@ def openFile(title=None):
     '''
     openFile(title)
 
-    Opens a file dialog box for a use to select a file.
+    Opens a file dialog box for a user to select a file.
     Returns the path to the file.
     '''
     return askopenfilename(title)
+
+def saveFile(title=None, initialFile=None, fileList=None):
+    '''
+    saveFile(title=None, initialFile=None, fileList=None)
+
+    Opens a file dialog box for a user to select a save location.
+    Returns a path to the location to save, including the file name.
+
+    Optional keyword arguments:
+    title: The text provided at the top of the dialog
+    initialFile: The text that pre-populates the filename box
+    fileList: A list of tuples, in format ('text', 'extension'). e.g. ('All Files', '*.*')
+    '''
+    return asksaveasfilename(title=title, initialFile=initialFile, filetypes=files, defaultextension=files)
