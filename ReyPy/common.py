@@ -13,7 +13,7 @@ def splash(title, message, columns = 80):
     padding = math.floor((columns - len(message))/2)
     message = (' ' * padding) + message
     print(bars)
-    print(Title)
+    print(title)
     print(bars)
     print("")
     print("")

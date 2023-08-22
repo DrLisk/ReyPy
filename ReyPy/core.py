@@ -15,7 +15,7 @@ def addNoise(signal, SNR):
 
     return signal + noiseVolts
 
-def generateSignals(frequencies, amplitudes, phases, start, end, samplePeriod, SNR=None):
+def generateSignals(frequencies, amplitudes, phases, start, stop, samplePeriod, SNR=None):
     '''
     generateSignals(frequencies, amplitudes, phases, duration, samplePeriod, SNR)
 
@@ -25,11 +25,11 @@ def generateSignals(frequencies, amplitudes, phases, start, end, samplePeriod, S
     Optional Key Word Arguments:
     
     '''
-    times = np.linspace(start, stop, math.floor((start - stop)/samplePeriod)) #could change floor to just int
-    signal = []
+    times = np.linspace(start, stop, math.floor((stop - start)/samplePeriod)) #could change floor to just int
+    signal = np.zeros(len(times)) 
     for (f, a, p) in zip(frequencies, amplitudes, phases):
         signal = signal + (a * np.cos(2*np.pi*f*times))
-    if SNR == None: return signal
+    if SNR == None: return times, signal
     else:
-        return addNoise(signal, SNR)
+        return addNoise(times, signal, SNR)
 
