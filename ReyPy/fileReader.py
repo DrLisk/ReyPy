@@ -12,7 +12,7 @@ def TXT(filepath):
     Takes path to .txt file and returns a list of strings of each line of the file.
     Right hand side whitespace is removed.
     '''
-    return [line.rstrip() for line in open(FilePath)]
+    return [line.rstrip() for line in open(filePath)]
 
 def CSV(filepath, newline=''):
     '''
@@ -26,3 +26,11 @@ def CSV(filepath, newline=''):
         reader = csv.reader(csvfile)
         data = list(reader)
     return data
+
+def GERBER(filepath):
+    '''
+    GERBER(filepath)
+
+    Takes the path to a gerber file and returns a list of strings containing the commands.
+    '''
+    return [line.rstrip() for line in open(filePath)]
