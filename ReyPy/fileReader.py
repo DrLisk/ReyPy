@@ -33,4 +33,4 @@ def GERBER(filepath):
 
     Takes the path to a gerber file and returns a list of strings containing the commands.
     '''
-    return [line.rstrip() for line in open(filePath)]
+    return [line.rstrip() for line in open(filepath)]

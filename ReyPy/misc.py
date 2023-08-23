@@ -1,5 +1,6 @@
 import math
-from tkinter import *
+from tkinter.filedialog import askopenfilename
+from tkinter.filedialog import asksaveasfilename
 
 def splash(title, message, columns = 80):
     '''
@@ -29,7 +30,7 @@ def openFileDialog(title=None):
     Opens a file dialog box for a user to select a file.
     Returns the path to the file.
     '''
-    return askopenfilename(title)
+    return askopenfilename(title=title)
 
 def saveFileDialog(title=None, initialFile=None, fileList=None):
     '''
